@@ -6,11 +6,15 @@ import { ConversorService } from './services/conversor.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NumeroDirective } from './directives/numero.directive';
+import { ModalCotacaoComponent } from './utils/modal-cotacao.component';
+import { DataBrPipe } from './pipes/data-br.pipe';
 
 @NgModule({
   declarations: [
     ConversorComponent,
-    NumeroDirective
+    NumeroDirective,
+    ModalCotacaoComponent,
+    DataBrPipe
   ],
   imports: [
     CommonModule,
@@ -18,7 +22,8 @@ import { NumeroDirective } from './directives/numero.directive';
     FormsModule
   ],
   exports: [
-    ConversorComponent
+    ConversorComponent,
+    ModalCotacaoComponent
   ],
   providers: [
     MoedaService,
